@@ -1,5 +1,24 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Service Areas | Telluride & San Miguel County Insulation",
+  description:
+    "Spray foam insulation service areas covering Telluride, Mountain Village, Placerville, Ophir, and all of San Miguel County, Colorado.",
+  keywords: [
+    "spray foam insulation Telluride",
+    "insulation Mountain Village",
+    "attic insulation Ophir CO",
+    "crawlspace sealing Placerville",
+    "San Miguel County insulation contractor",
+  ],
+  openGraph: {
+    title: "Service Areas | Telluride Thermal",
+    description:
+      "Serving Telluride, Mountain Village, Placerville, Ophir, and the greater San Miguel County area.",
+  },
+};
 
 export default function ServiceAreasPage() {
   return (

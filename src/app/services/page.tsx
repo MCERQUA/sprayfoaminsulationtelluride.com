@@ -1,5 +1,25 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Insulation Services | Spray Foam for Attics, Crawlspaces & Walls",
+  description:
+    "Residential and commercial spray foam insulation in Telluride, CO. Attic & roof, crawlspace, and whole-wall solutions engineered for high-altitude performance.",
+  keywords: [
+    "spray foam insulation services Telluride",
+    "attic insulation Mountain Village",
+    "crawlspace sealing Colorado",
+    "whole wall insulation",
+    "commercial insulation Telluride",
+    "high altitude spray foam",
+  ],
+  openGraph: {
+    title: "Insulation Services | Telluride Thermal",
+    description:
+      "The Architectural Shield — luxury spray foam solutions for high-altitude homes and commercial buildings in Telluride.",
+  },
+};
 
 export default function ServicesPage() {
   return (

@@ -1,7 +1,25 @@
-"use client";
-
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import BlogNewsletterForm from "./BlogNewsletterForm";
+
+export const metadata: Metadata = {
+  title: "Insulation Tips & Guides | Telluride Thermal Blog",
+  description:
+    "Expert insights on high-altitude thermal performance, energy efficiency, ice dam prevention, and spray foam insulation for mountain homes in Telluride, CO.",
+  keywords: [
+    "spray foam insulation tips Telluride",
+    "energy efficiency mountain homes",
+    "ice dam prevention Colorado",
+    "attic insulation guide",
+    "high altitude insulation",
+  ],
+  openGraph: {
+    title: "Insulation Tips & Guides | Telluride Thermal",
+    description:
+      "Expert insights on thermal performance, energy savings, and spray foam insulation for mountain architecture.",
+  },
+};
 
 export default function BlogPage() {
   return (
@@ -54,73 +72,79 @@ export default function BlogPage() {
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-24">
         {/* Main Featured Post */}
         <article className="md:col-span-8 group cursor-pointer">
-          <div className="relative overflow-hidden aspect-[16/9] mb-6">
-            <Image
-              className="w-full h-full object-cover grayscale-[0.3] group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
-              alt="Modern luxury mountain home in Telluride at dusk with warm interior lights"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDO0zuwNJg_FFLBerbJRu61nNH_nACtm9J1pPdNWMnv-LIzG8TJPedoSz2KeYKelQ6yJEGiMpkCO_w4WzVIDAGrBXk1JzSNHRAjCMrzENo0sIerLLJ4xMW94lQhpxgmQty5FwLfvtvtfzoRJc1oMkqFtKOoCQStZeWFTRvZL2ijpoaOK3P1p8qk8dyUSdN7Hj7yiqmpYRh6t8S-fcWYzEkHqMDibYKh7TaQSSK3pSkypk0WzK3R8XoQwL8Ppg7OBtiRwS5OD1N3-l4"
-              fill
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-            <div className="absolute bottom-8 left-8">
-              <span className="bg-primary text-white text-[10px] font-bold px-2 py-1 tracking-widest mb-3 inline-block">
-                FEATURED GUIDE
-              </span>
-              <h2 className="text-3xl md:text-4xl font-headline font-bold text-white leading-tight">
-                The Benefits of Spray Foam for<br />High-Altitude Homes
-              </h2>
+          <Link href="/blog">
+            <div className="relative overflow-hidden aspect-[16/9] mb-6">
+              <Image
+                className="w-full h-full object-cover grayscale-[0.3] group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                alt="Modern luxury mountain home in Telluride at dusk with warm interior lights"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDO0zuwNJg_FFLBerbJRu61nNH_nACtm9J1pPdNWMnv-LIzG8TJPedoSz2KeYKelQ6yJEGiMpkCO_w4WzVIDAGrBXk1JzSNHRAjCMrzENo0sIerLLJ4xMW94lQhpxgmQty5FwLfvtvtfzoRJc1oMkqFtKOoCQStZeWFTRvZL2ijpoaOK3P1p8qk8dyUSdN7Hj7yiqmpYRh6t8S-fcWYzEkHqMDibYKh7TaQSSK3pSkypk0WzK3R8XoQwL8Ppg7OBtiRwS5OD1N3-l4"
+                fill
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              <div className="absolute bottom-8 left-8">
+                <span className="bg-primary text-white text-[10px] font-bold px-2 py-1 tracking-widest mb-3 inline-block">
+                  FEATURED GUIDE
+                </span>
+                <h2 className="text-3xl md:text-4xl font-headline font-bold text-white leading-tight">
+                  The Benefits of Spray Foam for<br />High-Altitude Homes
+                </h2>
+              </div>
             </div>
-          </div>
-          <div className="flex items-center gap-4 text-xs font-medium text-outline uppercase tracking-widest">
-            <span>Dec 12, 2024</span>
-            <span className="w-1 h-1 bg-primary rounded-full" />
-            <span>Engineering</span>
-          </div>
+            <div className="flex items-center gap-4 text-xs font-medium text-outline uppercase tracking-widest">
+              <span>Dec 12, 2024</span>
+              <span className="w-1 h-1 bg-primary rounded-full" />
+              <span>Engineering</span>
+            </div>
+          </Link>
         </article>
 
         {/* Secondary Featured */}
         <div className="md:col-span-4 flex flex-col gap-8">
           <article className="group cursor-pointer">
-            <div className="aspect-square bg-surface-container-low mb-4 overflow-hidden relative">
-              <Image
-                className="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 transition-all duration-500"
-                alt="Close-up detail of high-quality closed cell spray foam insulation texture"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXrd_Pi61kxhEF5bcwJkZ83tVbcbs3z7oqXuBvsqMDxet4GRGsc25nWSCaD8E3ijjLpbQSAGj2dxJBuMONCmH-VoIbk9HAvu3AFATWmwXUwJfdeRV_pYgWNuF-JMpARg_Hj4qYhUAIopw81rJY4yJ5qkp7WEHYxPnHzqNGxzjpZms4yej24_g1aq-eEAz92VsK2rwH8eBzNlwgY6LP6ZNgw4TvVpV9yW6CG1RcPesbEOlINNSFFZZTJX6BRSmpfrqfB-WuhkF67yk"
-                fill
-              />
-            </div>
-            <div className="flex gap-4">
-              <div className="thermal-indicator flex-shrink-0" style={{ background: "linear-gradient(to bottom, #005cae, #a04100)", width: "4px" }} />
-              <div>
-                <h3 className="text-xl font-headline font-bold group-hover:text-primary transition-colors mb-2">
-                  Is Your Attic Winter-Ready?
-                </h3>
-                <p className="text-sm text-on-surface-variant line-clamp-2">
-                  Prepare your roof for the heavy Telluride snowfall with proper thermal barriers.
-                </p>
+            <Link href="/blog">
+              <div className="aspect-square bg-surface-container-low mb-4 overflow-hidden relative">
+                <Image
+                  className="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 transition-all duration-500"
+                  alt="Close-up detail of high-quality closed cell spray foam insulation texture"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXrd_Pi61kxhEF5bcwJkZ83tVbcbs3z7oqXuBvsqMDxet4GRGsc25nWSCaD8E3ijjLpbQSAGj2dxJBuMONCmH-VoIbk9HAvu3AFATWmwXUwJfdeRV_pYgWNuF-JMpARg_Hj4qYhUAIopw81rJY4yJ5qkp7WEHYxPnHzqNGxzjpZms4yej24_g1aq-eEAz92VsK2rwH8eBzNlwgY6LP6ZNgw4TvVpV9yW6CG1RcPesbEOlINNSFFZZTJX6BRSmpfrqfB-WuhkF67yk"
+                  fill
+                />
               </div>
-            </div>
+              <div className="flex gap-4">
+                <div className="thermal-indicator flex-shrink-0" style={{ background: "linear-gradient(to bottom, #005cae, #a04100)", width: "4px" }} />
+                <div>
+                  <h3 className="text-xl font-headline font-bold group-hover:text-primary transition-colors mb-2">
+                    Is Your Attic Winter-Ready?
+                  </h3>
+                  <p className="text-sm text-on-surface-variant line-clamp-2">
+                    Prepare your roof for the heavy Telluride snowfall with proper thermal barriers.
+                  </p>
+                </div>
+              </div>
+            </Link>
           </article>
           <article className="group cursor-pointer">
-            <div className="aspect-square bg-surface-container-low mb-4 overflow-hidden relative">
-              <Image
-                className="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 transition-all duration-500"
-                alt="Modern architectural blueprint overlaying a thermal imaging map"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJmWO8fqdCe4piQf4oz4bvArI9OtimVUYJt_QbncM6O4Lnlt5RSqrg5k130a-QzjZp7OiRQt0FLqEDUR5eM8NHinh2feE4ZrA46YYZej99gW51-_6j9Tr_XFnCGbN7DwWGPFTEhtqMx5xRYWl7xUX6kjA3b-sIOiu-KACVal--73TYQ74p2S1lUT-A0Y275wES9P9uBaQWKh5UJcmYgQAyUk4xufSKAUbes0U9GNun6O7sMF6QqJJlEnXJZdXZhxFQtT4hN4Rd_ZI"
-                fill
-              />
-            </div>
-            <div className="flex gap-4">
-              <div className="thermal-indicator flex-shrink-0" style={{ background: "linear-gradient(to bottom, #005cae, #a04100)", width: "4px" }} />
-              <div>
-                <h3 className="text-xl font-headline font-bold group-hover:text-primary transition-colors mb-2">
-                  Top 5 Ways Spray Foam Saves Energy
-                </h3>
-                <p className="text-sm text-on-surface-variant line-clamp-2">
-                  Lowering utility costs by up to 40% through airtight precision sealing.
-                </p>
+            <Link href="/blog">
+              <div className="aspect-square bg-surface-container-low mb-4 overflow-hidden relative">
+                <Image
+                  className="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 transition-all duration-500"
+                  alt="Modern architectural blueprint overlaying a thermal imaging map"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJmWO8fqdCe4piQf4oz4bvArI9OtimVUYJt_QbncM6O4Lnlt5RSqrg5k130a-QzjZp7OiRQt0FLqEDUR5eM8NHinh2feE4ZrA46YYZej99gW51-_6j9Tr_XFnCGbN7DwWGPFTEhtqMx5xRYWl7xUX6kjA3b-sIOiu-KACVal--73TYQ74p2S1lUT-A0Y275wES9P9uBaQWKh5UJcmYgQAyUk4xufSKAUbes0U9GNun6O7sMF6QqJJlEnXJZdXZhxFQtT4hN4Rd_ZI"
+                  fill
+                />
               </div>
-            </div>
+              <div className="flex gap-4">
+                <div className="thermal-indicator flex-shrink-0" style={{ background: "linear-gradient(to bottom, #005cae, #a04100)", width: "4px" }} />
+                <div>
+                  <h3 className="text-xl font-headline font-bold group-hover:text-primary transition-colors mb-2">
+                    Top 5 Ways Spray Foam Saves Energy
+                  </h3>
+                  <p className="text-sm text-on-surface-variant line-clamp-2">
+                    Lowering utility costs by up to 40% through airtight precision sealing.
+                  </p>
+                </div>
+              </div>
+            </Link>
           </article>
         </div>
       </div>
@@ -139,19 +163,7 @@ export default function BlogPage() {
               insulation technology.
             </p>
           </div>
-          <form className="flex flex-col sm:flex-row gap-0" onSubmit={(e) => e.preventDefault()}>
-            <input
-              className="flex-grow bg-white border-none py-4 px-6 text-sm focus:ring-0 focus:bg-surface-container-lowest"
-              placeholder="Email Address"
-              type="email"
-            />
-            <button
-              className="primary-gradient text-white px-8 py-4 font-bold text-sm tracking-widest hover:brightness-110 transition-all"
-              type="submit"
-            >
-              SIGN UP
-            </button>
-          </form>
+          <BlogNewsletterForm />
         </div>
       </section>
 
@@ -183,7 +195,7 @@ export default function BlogPage() {
             </p>
             <Link
               className="text-xs font-bold uppercase tracking-widest text-primary flex items-center gap-2"
-              href="#"
+              href="/blog"
             >
               Read Case Study{" "}
               <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
@@ -211,7 +223,7 @@ export default function BlogPage() {
             </p>
             <Link
               className="text-xs font-bold uppercase tracking-widest text-primary flex items-center gap-2"
-              href="#"
+              href="/blog"
             >
               Read Guide{" "}
               <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
@@ -239,7 +251,7 @@ export default function BlogPage() {
             </p>
             <Link
               className="text-xs font-bold uppercase tracking-widest text-primary flex items-center gap-2"
-              href="#"
+              href="/blog"
             >
               Read Update{" "}
               <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
